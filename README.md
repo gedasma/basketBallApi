@@ -1,3 +1,12 @@
+# to use after cloning do "npm install" and create cofig.env file for mongoDB using this example:
+NODE_ENV=development\
+PORT=???\
+USER=???\
+DATABASE=mongodb+srv://???<password>@cluster0.???.mongodb.net/basketball_db?retryWrites=true&w=majority\
+DATABASE_PASSWORD=???\
+JWT_SECRET=???\
+JWT_EXPIRES_IN=???m
+
 # USER endpoints:
 
 ## POST/api/register
@@ -42,6 +51,9 @@ return a participant's data with specific id
 
 ## GET/api/team/{team's name}/members(?page=1)
 returns member from a specific team
+
+you can sort the results by field using "&sort={field name}" example:\
+GET/api/team/My Team Name/members?page=3&sort=lastName
 
 ## GET/api/team/youngest(?page=1)
 returns participants that are 20 or younger
